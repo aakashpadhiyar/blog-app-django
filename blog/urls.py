@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import BlogListView, BlogDetailView, BlogCreateView, BlogUpdateView
+from .views import BlogListView, BlogDetailView, BlogCreateView, BlogUpdateView, DeleteView
 
 urlpatterns = [
     path('post/<int:pk>/edit/', BlogUpdateView.as_view(), name='post_edit'),

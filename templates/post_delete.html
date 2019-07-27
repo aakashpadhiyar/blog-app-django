@@ -1,0 +1,9 @@
+{% extends 'base.hrml' %}
+
+{% block contant %}
+  <h1>Delete Post</h1>
+  <form action="" method="post">{% csrf_token %}
+    <p>Are you sure you want to Delete "{{ post.title }}"?</p>
+    <input type="submit" value="Confirm">    
+  </form>
+{% endblock contant %}
