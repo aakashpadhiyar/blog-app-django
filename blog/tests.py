@@ -33,6 +33,7 @@ class BlogTest(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'Nice body content')
         self.assertTemplateUsed(response, 'home.html')
+        
     def test_post_detail_view(self):
         response = self.client.get('/post/1/')
         no_response = self.client.get('/post/100000/')
